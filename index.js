@@ -99,6 +99,8 @@ app.post("/record-mouseenter", (req, res) => {
 
       case "Supports": array= appleNavbar[6];
       break;
+
+    
     
     }
 

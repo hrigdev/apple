@@ -1,6 +1,8 @@
 $(".nav-link").mouseenter(function() {
 
     $(".dropdown-container").addClass("dropdown-action");
+    $(".search-container").removeClass("action");
+
 });
 
 $(".navbar").on("mouseleave", ".navbar, .dropdown-container", function() {
@@ -41,3 +43,20 @@ $(".nav-link").mouseenter(function(){
         }
     });
 });
+
+
+
+
+$(".svg-link").click(function(){
+    $(".search-container").addClass("action");
+    $(".dropdown-container").removeClass("dropdown-action");
+
+
+
+})
+
+$(".navbar").on("mouseleave", ".search-container .svg-link", function() {
+    $(".search-container").removeClass("action");
+});
+
+

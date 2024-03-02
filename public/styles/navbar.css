@@ -10,6 +10,7 @@
 body{
     margin:0;
     padding:0;
+    background-color: black;
 }
 
 
@@ -17,7 +18,7 @@ body{
     height:5rem;
     width:100vw;
     position:fixed;
-    background-color: black;
+    background-image: linear-gradient(black, rgb(41, 40, 40));
     color:white;
     transition: ease var(--transition-speed);
 
@@ -53,7 +54,7 @@ body{
 
 .dropdown-container{
     opacity: 0;
-    background-image: linear-gradient(black, rgb(52, 52, 52));
+    background-image: linear-gradient(rgb(41, 40, 40), rgb(67, 67, 67));
     width:100%;
     position:absolute;
     left:0;
@@ -71,12 +72,14 @@ body{
     margin-left:20%;
     list-style: none;
     margin-top:2rem;
+    z-index: 1;
 }
 
 .drop-down-header{
     font-size: 1rem;
     color:gray;
-    background-color: black;
+    z-index: 1;
+
 }
 
 .ddl{
@@ -86,12 +89,16 @@ body{
     width:100%;
     padding:0;
     transition: var(--transition-speed);
+    z-index: 1;
+
 
 }
 
 .ddl1, .ddl2{
     font-size: 1rem;
     transition: var(--transition-speed);
+    z-index: 1;
+
 }
 
 .items{
@@ -109,6 +116,94 @@ body{
 .dropdown-action{
 opacity: 1; 
 transition: ease var(--transition-speed);
+z-index: 1;
+
 }
 
 
+
+
+.search-container{
+    background-image: linear-gradient(black, rgb(52, 52, 52));
+    width:100%;
+    position:absolute;
+    left:0;
+    transition: ease var(--transition-speed);
+    top:5rem;
+    height:25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:3rem;
+    opacity: 0;
+    z-index: 1;
+
+}
+
+.search-bar{
+    width:90%;
+    height:5rem;
+    background-image:linear-gradient(black, rgb(17, 17, 17));
+    border:none;
+    border: x;
+    font-size:2rem;
+    color:white;
+    padding:0;
+
+
+}
+
+::placeholder{
+    color:white;
+    font-size:2rem;
+}
+
+label{
+    margin-right:1rem;
+    position:relative;
+    top:3px;
+}
+
+
+.search-bar:focus {
+    outline: none; 
+    margin-left:1px;
+}
+
+
+.search-drop-container{
+    margin-top:2rem;
+    width:70%;
+
+}
+
+.search-di{
+    list-style-type: none;
+    margin-top:10px;
+}
+
+
+.search-di0{
+    color:gray;
+    list-style-type: none;
+}
+
+.action{
+    opacity: 1;
+    transition: ease var(--transition-speed);
+
+}
+
+
+.price{
+    background-color: gray;
+    position:absolute;
+    top:5rem;
+    color:white;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    height:2rem;
+    align-items: center;
+    z-index: -1;
+}
